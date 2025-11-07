@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2E8B57;      /* Verde esmeralda para cajas */
-            --primary-dark: #1E6B47;
-            --secondary: #FF6B35;    /* Naranja coral vibrante */
-            --accent: #4ECDC4;       /* Turquesa moderno */
-            --gold: #FFD166;         /* Dorado suave */
-            --dark: #1A1F2B;         /* Azul oscuro elegante */
-            --darker: #0F141F;       /* Fondo más oscuro */
-            --light: #F7F9FC;        /* Blanco suave */
-            --text-light: #E8EEF2;   /* Texto claro */
-            --text-muted: #8A9BA8;   /* Texto secundario */
-            --success: #06D6A0;      /* Verde éxito */
-            --warning: #FFD166;      /* Amarillo advertencia */
-            --danger: #EF476F;       /* Rojo coral */
+            --primary: #8B4513;
+            --secondary: #C19A6B;
+            --accent: #D4AF37;
+            --gold: #FFD700;
+            --dark: #2C1810;
+            --darker: #1A0F08;
+            --light: #F5F5DC;
+            --text-light: #F8F8FF;
+            --text-muted: #A9A9A9;
+            --success: #32CD32;
+            --warning: #FFA500;
+            --danger: #DC143C;
+            --whisky: #B8860B;
         }
         
         body {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, #15202B 100%);
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, #3E2723 100%);
             color: var(--text-light);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
@@ -40,9 +40,9 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(46, 139, 87, 0.1) 0%, transparent 25%),
-                radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 40% 80%, rgba(78, 205, 196, 0.06) 0%, transparent 25%);
+                radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(193, 154, 107, 0.12) 0%, transparent 25%),
+                radial-gradient(circle at 40% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 25%);
             z-index: -1;
         }
         
@@ -90,9 +90,9 @@
         
         .menu-header {
             background: linear-gradient(135deg, 
-                rgba(26, 35, 47, 0.95) 0%, 
-                rgba(31, 42, 56, 0.98) 50%,
-                rgba(36, 49, 65, 0.95) 100%);
+                rgba(44, 24, 16, 0.95) 0%, 
+                rgba(139, 69, 19, 0.98) 50%,
+                rgba(193, 154, 107, 0.95) 100%);
             padding: 35px 20px;
             text-align: center;
             border-bottom: 3px solid transparent;
@@ -101,34 +101,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        .menu-header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%232E8B57" opacity="0.05" d="M50,10 C60,20 70,30 80,40 C90,50 95,60 95,70 C95,80 90,90 80,95 C70,100 60,95 50,90 C40,85 30,80 20,70 C10,60 5,50 10,40 C15,30 25,20 35,15 C40,12 45,10 50,10 Z"/></svg>'),
-                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FF6B35" opacity="0.04" d="M30,30 C45,20 65,20 80,30 C90,40 95,55 95,70 C95,85 90,95 80,100 C65,110 45,110 30,100 C20,95 15,85 15,70 C15,55 20,40 30,30 Z"/></svg>');
-            background-size: 120px, 100px;
-            background-position: 10% 20%, 90% 80%;
-            opacity: 0.3;
-        }
-        
-        .logo {
-            font-size: 3.2rem;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            text-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
-            animation: pulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
         
         .brand-name {
@@ -141,7 +113,6 @@
             letter-spacing: 1.5px;
             margin-bottom: 8px;
             text-transform: uppercase;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
         }
         
         .brand-subtitle {
@@ -155,7 +126,6 @@
             font-size: 1rem;
             color: var(--text-muted);
             margin-bottom: 0;
-            font-weight: 400;
         }
         
         .cigar-card {
@@ -168,7 +138,7 @@
             border-radius: 16px;
             padding: 22px;
             margin-bottom: 22px;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -183,40 +153,11 @@
                 rgba(40, 75, 55, 0.9) 100%);
         }
         
-        .cigar-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, 
-                transparent, 
-                rgba(255, 107, 53, 0.15), 
-                transparent);
-            transition: left 0.7s ease;
-        }
-
-        .box-card::before {
-            background: linear-gradient(90deg, 
-                transparent, 
-                rgba(46, 139, 87, 0.2), 
-                transparent);
-        }
-        
-        .cigar-card:hover::before {
-            left: 100%;
-        }
-        
         .cigar-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
         }
 
-        .box-card:hover {
-            box-shadow: 0 15px 35px rgba(46, 139, 87, 0.25);
-        }
-        
         .cigar-name {
             font-size: 1.1rem;
             font-weight: 700;
@@ -229,11 +170,6 @@
             text-align: center;
         }
 
-        .box-card .cigar-name {
-            color: var(--primary);
-            border-image: linear-gradient(90deg, transparent, var(--primary), transparent) 1;
-        }
-        
         .cigar-price {
             font-size: 1.4rem;
             color: var(--text-light);
@@ -246,21 +182,6 @@
             background-clip: text;
         }
 
-        .box-card .cigar-price {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .cigar-details {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 12px;
-            font-weight: 400;
-        }
-        
         .cigar-notes {
             font-style: italic;
             color: var(--text-muted);
@@ -271,14 +192,8 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             border-left: 4px solid var(--secondary);
-            font-weight: 400;
         }
 
-        .box-card .cigar-notes {
-            border-left: 4px solid var(--primary);
-            background: rgba(46, 139, 87, 0.1);
-        }
-        
         .origin-badge {
             position: absolute;
             top: 18px;
@@ -293,11 +208,6 @@
             z-index: 2;
         }
 
-        .box-badge {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: var(--light);
-        }
-        
         .strength-badge {
             position: absolute;
             top: 18px;
@@ -311,23 +221,12 @@
             z-index: 2;
         }
         
-        .strength-suave { 
-            background: linear-gradient(45deg, var(--success), #06D6A0);
-        }
-        .strength-media { 
-            background: linear-gradient(45deg, var(--warning), #FFB347);
-            color: var(--dark); 
-        }
-        .strength-fuerte { 
-            background: linear-gradient(45deg, var(--danger), #EF476F);
-        }
-        .strength-media-fuerte { 
-            background: linear-gradient(45deg, #FF9E44, var(--danger));
-        }
-        .strength-suave-media { 
-            background: linear-gradient(45deg, var(--accent), #06D6A0);
-        }
-        
+        .strength-suave { background: linear-gradient(45deg, var(--success), #06D6A0); }
+        .strength-media { background: linear-gradient(45deg, var(--warning), #FFB347); color: var(--dark); }
+        .strength-fuerte { background: linear-gradient(45deg, var(--danger), #EF476F); }
+        .strength-media-fuerte { background: linear-gradient(45deg, #FF9E44, var(--danger)); }
+        .strength-suave-media { background: linear-gradient(45deg, var(--accent), #06D6A0); }
+
         .filter-section {
             background: linear-gradient(135deg, 
                 rgba(31, 42, 56, 0.9) 0%, 
@@ -336,18 +235,6 @@
             padding: 25px;
             margin-bottom: 35px;
             border: 2px solid rgba(255, 107, 53, 0.2);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-        }
-        
-        .filter-title {
-            color: var(--secondary);
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            text-align: center;
-            border-bottom: 2px solid transparent;
-            border-image: linear-gradient(90deg, transparent, var(--secondary), transparent) 1;
-            padding-bottom: 12px;
-            font-weight: 700;
         }
         
         .filter-btn {
@@ -358,7 +245,7 @@
             padding: 10px 20px;
             font-size: 0.9rem;
             border-radius: 25px;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.3s ease;
             font-weight: 600;
         }
 
@@ -370,16 +257,14 @@
         .filter-btn:hover, .filter-btn.active {
             background: var(--secondary);
             color: var(--light);
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+            transform: translateY(-3px);
         }
 
         .box-filter-btn:hover, .box-filter-btn.active {
             background: var(--primary);
             color: var(--light);
-            box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3);
         }
-        
+
         .section-title {
             color: var(--secondary);
             border-bottom: 3px solid transparent;
@@ -387,58 +272,52 @@
             padding-bottom: 12px;
             margin: 35px 0 25px 0;
             font-size: 1.8rem;
-            position: relative;
-            display: inline-block;
             text-align: center;
             width: 100%;
             font-weight: 700;
         }
 
-        .box-section-title {
-            color: var(--primary);
-            border-image: linear-gradient(90deg, var(--primary), var(--accent)) 1;
-        }
-        
         .cigar-image {
-            height: 130px;
+            height: 160px;
             background: linear-gradient(135deg, 
-                rgba(255, 107, 53, 0.15) 0%, 
-                rgba(255, 209, 102, 0.1) 50%,
-                rgba(78, 205, 196, 0.1) 100%);
+                rgba(139, 69, 19, 0.15) 0%, 
+                rgba(193, 154, 107, 0.1) 50%,
+                rgba(212, 175, 55, 0.1) 100%);
             border-radius: 12px;
             margin-bottom: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary);
-            font-size: 2.2rem;
-            overflow: hidden;
-            position: relative;
             border: 2px solid transparent;
             border-image: linear-gradient(45deg, var(--secondary), var(--accent)) 1;
+            overflow: hidden;
+            position: relative;
         }
 
-        .box-card .cigar-image {
-            background: linear-gradient(135deg, 
-                rgba(46, 139, 87, 0.2) 0%, 
-                rgba(78, 205, 196, 0.15) 50%,
-                rgba(30, 107, 71, 0.2) 100%);
-            color: var(--primary);
-            border-image: linear-gradient(45deg, var(--primary), var(--accent)) 1;
-        }
-        
-        .cigar-photo {
+        .cigar-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border-radius: 10px;
+            transition: transform 0.3s ease;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
-        
-        .cigar-card:hover .cigar-photo {
+
+        .cigar-card:hover .cigar-image img {
             transform: scale(1.1);
         }
-        
+
+        .flag-overlay {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 50px;
+            height: 30px;
+            border-radius: 3px;
+            border: 2px solid var(--light);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
         .stats-bar {
             display: flex;
             justify-content: space-between;
@@ -446,10 +325,6 @@
             padding-top: 18px;
             border-top: 2px solid transparent;
             border-image: linear-gradient(90deg, transparent, var(--secondary), transparent) 1;
-        }
-
-        .box-card .stats-bar {
-            border-image: linear-gradient(90deg, transparent, var(--primary), transparent) 1;
         }
         
         .stat {
@@ -462,17 +337,12 @@
             font-weight: 700;
             color: var(--secondary);
         }
-
-        .box-card .stat-value {
-            color: var(--primary);
-        }
         
         .stat-label {
             font-size: 0.7rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            font-weight: 600;
         }
         
         .footer {
@@ -485,25 +355,9 @@
             border-top: 3px solid transparent;
             border-image: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) 1;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: 400;
-        }
-        
-        .cigar-count {
-            background: var(--secondary);
-            color: var(--light);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-left: 8px;
-            font-weight: 700;
         }
 
-        .box-count {
-            background: var(--primary);
-        }
-
-        /* Estilos para la sección de Mixología */
+        /* Estilos para Mixología */
         .mixology-section {
             background: linear-gradient(135deg, 
                 rgba(31, 42, 56, 0.9) 0%, 
@@ -512,7 +366,59 @@
             padding: 30px;
             margin: 40px 0;
             border: 2px solid rgba(78, 205, 196, 0.3);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Estilos para Whiskys */
+        .whisky-section {
+            background: linear-gradient(135deg, 
+                rgba(42, 35, 26, 0.9) 0%, 
+                rgba(56, 42, 31, 0.95) 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .whisky-category {
+            margin-bottom: 35px;
+        }
+
+        .whisky-category-title {
+            color: var(--whisky);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, transparent, var(--whisky), transparent) 1;
+            font-weight: 700;
+        }
+
+        .whisky-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--whisky);
+            transition: all 0.3s ease;
+        }
+
+        .whisky-card:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateX(5px);
+        }
+
+        .whisky-name {
+            color: var(--whisky);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .whisky-price {
+            color: var(--whisky);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .cocktail-category {
@@ -527,13 +433,6 @@
             border-bottom: 2px solid transparent;
             border-image: linear-gradient(90deg, transparent, var(--accent), transparent) 1;
             font-weight: 700;
-        }
-
-        .cocktail-category-description {
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1rem;
         }
 
         .cocktail-card {
@@ -557,24 +456,17 @@
             margin-bottom: 8px;
         }
 
+        .cocktail-price {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
         .cocktail-description {
             color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-
-        .cocktail-ingredients {
-            color: var(--text-light);
             font-size: 0.9rem;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .cocktail-serving {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-style: italic;
+            line-height: 1.5;
         }
 
         .nav-tabs {
@@ -597,33 +489,17 @@
             border-bottom: 3px solid var(--secondary);
         }
 
-        .nav-tabs .nav-link:hover {
+        .filter-title {
             color: var(--secondary);
-            background: rgba(255, 107, 53, 0.05);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
         }
-        
+
         @media (max-width: 768px) {
             .brand-name {
                 font-size: 2rem;
             }
-            
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            .cigar-card {
-                padding: 18px;
-            }
-            
-            .cigar-name {
-                font-size: 1rem;
-            }
-            
-            .filter-btn {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-            }
-
             .nav-tabs .nav-link {
                 padding: 10px 15px;
                 font-size: 0.9rem;
@@ -632,7 +508,6 @@
     </style>
 </head>
 <body>
-    <!-- Bordes de lujo -->
     <div class="luxury-border">
         <div class="border-top"></div>
         <div class="border-bottom"></div>
@@ -641,11 +516,7 @@
     </div>
 
     <div class="container py-4">
-        <!-- Encabezado -->
         <div class="menu-header">
-            <div class="logo">
-                <i class="fas fa-smoking"></i>
-            </div>
             <h1 class="brand-name">HAMAKI BAR</h1>
             <p class="brand-subtitle">by UMA UMA RAMEN</p>
             <p class="location">
@@ -653,355 +524,232 @@
             </p>
         </div>
 
-        <!-- Navegación entre secciones -->
-        <ul class="nav nav-tabs justify-content-center" id="menuTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="cigars-tab" data-bs-toggle="tab" data-bs-target="#cigars" type="button" role="tab" aria-controls="cigars" aria-selected="true">
+        <ul class="nav nav-tabs justify-content-center" id="menuTabs">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#cigars">
                     <i class="fas fa-smoking"></i> Puros Premium
                 </button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="mixology-tab" data-bs-toggle="tab" data-bs-target="#mixology" type="button" role="tab" aria-controls="mixology" aria-selected="false">
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mixology">
                     <i class="fas fa-cocktail"></i> Mixología
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#whisky">
+                    <i class="fas fa-whiskey-glass"></i> Whiskys
                 </button>
             </li>
         </ul>
 
-        <!-- Contenido de las pestañas -->
-        <div class="tab-content" id="menuTabsContent">
-            <!-- Pestaña de Puros -->
-            <div class="tab-pane fade show active" id="cigars" role="tabpanel" aria-labelledby="cigars-tab">
-                <!-- Filtros -->
+        <div class="tab-content">
+            <!-- Pestaña Puros -->
+            <div class="tab-pane fade show active" id="cigars">
                 <div class="filter-section">
                     <h3 class="filter-title">
                         <i class="fas fa-filter"></i> Filtrar Puros
                     </h3>
                     <div class="text-center">
                         <button class="btn filter-btn active" onclick="filterSelection('all')">
-                            <i class="fas fa-th-large"></i> Todos <span class="cigar-count" id="count-all">42</span>
+                            Todos
                         </button>
                         <button class="btn filter-btn box-filter-btn" onclick="filterSelection('box')">
-                            <i class="fas fa-box"></i> Por Caja <span class="cigar-count box-count" id="count-box">9</span>
+                            Por Caja
                         </button>
                         <button class="btn filter-btn" onclick="filterSelection('cuba')">
-                            <i class="fas fa-flag"></i> Cuba <span class="cigar-count" id="count-cuba">5</span>
+                            Cuba
                         </button>
                         <button class="btn filter-btn" onclick="filterSelection('mexico')">
-                            <i class="fas fa-flag"></i> México <span class="cigar-count" id="count-mexico">11</span>
+                            México
                         </button>
                         <button class="btn filter-btn" onclick="filterSelection('nicaragua')">
-                            <i class="fas fa-flag"></i> Nicaragua <span class="cigar-count" id="count-nicaragua">15</span>
+                            Nicaragua
                         </button>
-                    </div>
-                    <div class="text-center mt-3">
-                        <button class="btn filter-btn" onclick="filterSelection('suave')">
-                            <i class="fas fa-wind"></i> Suave
+                        <button class="btn filter-btn" onclick="filterSelection('honduras')">
+                            Honduras
                         </button>
-                        <button class="btn filter-btn" onclick="filterSelection('media')">
-                            <i class="fas fa-fire"></i> Media
+                        <button class="btn filter-btn" onclick="filterSelection('dominicana')">
+                            Rep. Dominicana
                         </button>
-                        <button class="btn filter-btn" onclick="filterSelection('fuerte')">
-                            <i class="fas fa-fire-alt"></i> Fuerte
+                        <button class="btn filter-btn" onclick="filterSelection('usa')">
+                            USA
                         </button>
                     </div>
                 </div>
 
-                <!-- Lista de Puros -->
                 <div class="row" id="cigar-list">
                     <!-- Los puros se cargan aquí dinámicamente -->
                 </div>
             </div>
 
-            <!-- Pestaña de Mixología -->
-            <div class="tab-pane fade" id="mixology" role="tabpanel" aria-labelledby="mixology-tab">
+            <!-- Pestaña Mixología -->
+            <div class="tab-pane fade" id="mixology">
                 <div class="mixology-section">
-                    <div class="text-center mb-5">
-                        <h2 class="section-title">
-                            <i class="fas fa-cocktail"></i> Carta de Mixología
-                        </h2>
-                        <p class="cocktail-category-description text-center">
-                            Bienvenido a nuestro rincón de alquimia líquida. Donde la tradición se encuentra con la perfección. Cada trago es una historia, y cada ingrediente, un personaje. Disfrute del viaje.
-                        </p>
-                    </div>
-
-                    <!-- CÓCTELES REFRESCANTES & FRUTALES -->
+                    <h2 class="section-title">
+                        <i class="fas fa-cocktail"></i> Carta de Mixología
+                    </h2>
+                    
                     <div class="cocktail-category">
-                        <h3 class="cocktail-category-title">1. CÓCTELES REFRESCANTES & FRUTALES</h3>
-                        <p class="cocktail-category-description">Ideales para comenzar la velada o acompañar un momento de relax.</p>
-
+                        <h3 class="cocktail-category-title">CÓCTELES CLÁSICOS</h3>
+                        
                         <div class="cocktail-card">
                             <div class="cocktail-name">Piña Colada</div>
-                            <p class="cocktail-description">Un viaje a la brisa del Caribe.</p>
-                            <p class="cocktail-ingredients">Ron blanco, crema de coco y jugo de piña natural. Batido hasta lograr una textura sedosa y coronado con ralladura de coco tostado.</p>
-                            <p class="cocktail-serving">Copa Cóctel / Frío</p>
+                            <p class="cocktail-description">Ron blanco, crema de coco y jugo de piña natural.</p>
+                            <p class="cocktail-price">$80</p>
                         </div>
 
                         <div class="cocktail-card">
-                            <div class="cocktail-name">Margarita</div>
-                            <p class="cocktail-description">El equilibrio perfecto entre ácido y fuerte.</p>
-                            <p class="cocktail-ingredients">Tequila 100% agave, Cointreau y jugo de lima fresca. Servida "on the rocks" con un borde de sal gruesa.</p>
-                            <p class="cocktail-serving">Copa Margarita / Frío</p>
+                            <div class="cocktail-name">Martini Clásico</div>
+                            <p class="cocktail-description">Ginebra London Dry y Vermut Seco, removidos hasta el punto de congelación perfecto.</p>
+                            <p class="cocktail-price">$100</p>
                         </div>
 
                         <div class="cocktail-card">
-                            <div class="cocktail-name">Cosmopolitan</div>
-                            <p class="cocktail-description">Elegante, urbano y con un toque de fruta.</p>
-                            <p class="cocktail-ingredients">Vodka cítrico, Cointreau, jugo de arándano y un toque de lima fresca. Un clásico moderno de sofisticación rosada.</p>
-                            <p class="cocktail-serving">Copa de Martini / Muy Frío</p>
+                            <div class="cocktail-name">Martini Manhattan</div>
+                            <p class="cocktail-description">Whisky Rye, Vermut Rojo y Amargo de Angostura.</p>
+                            <p class="cocktail-price">$100</p>
                         </div>
-                    </div>
 
-                    <!-- CÓCTELES ROBUSTOS & AMARGOS -->
-                    <div class="cocktail-category">
-                        <h3 class="cocktail-category-title">2. CÓCTELES ROBUSTOS & AMARGOS</h3>
-                        <p class="cocktail-category-description">Para paladares audaces que buscan complejidad y carácter.</p>
+                        <div class="cocktail-card">
+                            <div class="cocktail-name">Martini Cosmopolitan</div>
+                            <p class="cocktail-description">Vodka cítrico, Cointreau, jugo de arándano y lima fresca.</p>
+                            <p class="cocktail-price">$100</p>
+                        </div>
 
                         <div class="cocktail-card">
                             <div class="cocktail-name">Negroni</div>
-                            <p class="cocktail-description">Un ícono de la elegancia italiana.</p>
-                            <p class="cocktail-ingredients">Ginebra, Campari y Vermut Rojo. Mezclado con hielo y decorado con una cáscara de naranja.</p>
-                            <p class="cocktail-serving">Vaso Bajo / Frío</p>
-                        </div>
-
-                        <div class="cocktail-card">
-                            <div class="cocktail-name">Manhattan</div>
-                            <p class="cocktail-description">La sofisticación de Nueva York en un vaso.</p>
-                            <p class="cocktail-ingredients">Whisky Rye, Vermut Rojo y un toque de Amargo de Angostura. Removido y servido "up" con una cereza al marrasquino.</p>
-                            <p class="cocktail-serving">Copa de Cóctel / Frío</p>
+                            <p class="cocktail-description">Ginebra, Campari y Vermut Rojo.</p>
+                            <p class="cocktail-price">$130</p>
                         </div>
 
                         <div class="cocktail-card">
                             <div class="cocktail-name">Old Fashioned</div>
-                            <p class="cocktail-description">La definición misma del cóctel.</p>
-                            <p class="cocktail-ingredients">Bourbon de calidad, un terrón de azúcar, Amargo de Angostura y un toque de agua. La simplicidad hecha arte.</p>
-                            <p class="cocktail-serving">Vaso Old Fashioned / Frío</p>
+                            <p class="cocktail-description">Bourbon, azúcar, Amargo de Angostura.</p>
+                            <p class="cocktail-price">$90</p>
                         </div>
-                    </div>
-
-                    <!-- CÓCTELES ESPIRITUOSOS & PUROS -->
-                    <div class="cocktail-category">
-                        <h3 class="cocktail-category-title">3. CÓCTELES ESPIRITUOSOS & PUROS</h3>
-                        <p class="cocktail-category-description">Para quienes aprecian el sabor limpio y directo de los destilados.</p>
 
                         <div class="cocktail-card">
-                            <div class="cocktail-name">Martini Clásico</div>
-                            <p class="cocktail-description">El rey de los cócteles. Puro y atemporal.</p>
-                            <p class="cocktail-ingredients">Ginebra London Dry y Vermut Seco, removidos hasta el punto de congelación perfecto. Servido con una aceituna o una torsión de limón.</p>
-                            <p class="cocktail-serving">Copa de Martini / Muy Frío</p>
+                            <div class="cocktail-name">Margarita</div>
+                            <p class="cocktail-description">Tequila 100% agave, Cointreau y jugo de lima fresca.</p>
+                            <p class="cocktail-price">$100</p>
                         </div>
                     </div>
 
-                    <!-- ELIXIRES CON CAFÉ -->
                     <div class="cocktail-category">
-                        <h3 class="cocktail-category-title">4. ELIXIRES CON CAFÉ</h3>
-                        <p class="cocktail-category-description">La fusión perfecta entre el mundo del espíritu y el grano.</p>
-
+                        <h3 class="cocktail-category-title">ELIXIRES CON CAFÉ</h3>
+                        
                         <div class="cocktail-card">
                             <div class="cocktail-name">Carajillo</div>
-                            <p class="cocktail-description">Tradición española en su máxima expresión.</p>
-                            <p class="cocktail-ingredients">Un shot de espresso recién preparado vertido sobre Brandy o Ron oscuro. Simple, caliente y reconfortante.</p>
-                            <p class="cocktail-serving">Copa de Vidrio / Caliente</p>
+                            <p class="cocktail-description">Espresso con Brandy o Ron oscuro.</p>
+                            <p class="cocktail-price">$130</p>
                         </div>
 
                         <div class="cocktail-card">
                             <div class="cocktail-name">Carajilla</div>
-                            <p class="cocktail-description">Nuestra versión cremosa del clásico.</p>
-                            <p class="cocktail-ingredients">Mezcla de Baileys y espresso caliente. Suave, cremosa y deliciosa.</p>
-                            <p class="cocktail-serving">Copa Irlandesa / Caliente</p>
+                            <p class="cocktail-description">Baileys y espresso caliente.</p>
+                            <p class="cocktail-price">$130</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña Whiskys -->
+            <div class="tab-pane fade" id="whisky">
+                <div class="whisky-section">
+                    <h2 class="section-title" style="color: var(--whisky);">
+                        <i class="fas fa-whiskey-glass"></i> Selección de Whiskys
+                    </h2>
+                    
+                    <div class="whisky-category">
+                        <h3 class="whisky-category-title">WHISKYS JAPONESES</h3>
+                        
+                        <div class="whisky-card">
+                            <div class="whisky-name">Hibiki Suntory Whisky Master's Select</div>
+                            <p class="cocktail-description">Blend armonioso con sabores a naranja y miel.</p>
+                            <p class="whisky-price">$1000</p>
+                        </div>
+
+                        <div class="whisky-card">
+                            <div class="whisky-name">The Yamazaki Single Malt</div>
+                            <p class="cocktail-description">Single malt premium con notas de miel y frutas maduras.</p>
+                            <p class="whisky-price">$950</p>
+                        </div>
+
+                        <div class="whisky-card">
+                            <div class="whisky-name">Suntory Whisky TOKI</div>
+                            <p class="cocktail-description">Suave y versátil con notas de uva verde y miel.</p>
+                            <p class="whisky-price">$300</p>
                         </div>
                     </div>
 
-                    <div class="text-center mt-5">
-                        <p class="cocktail-serving" style="font-size: 1.1rem; color: var(--accent);">
-                            <i class="fas fa-glass-cheers"></i> ¡Salud!
-                        </p>
+                    <div class="whisky-category">
+                        <h3 class="whisky-category-title">WHISKYS ESCOCESES</h3>
+                        
+                        <div class="whisky-card">
+                            <div class="whisky-name">Laphroaig 10 Years</div>
+                            <p class="cocktail-description">Carácter ahumado intenso con notas medicinales.</p>
+                            <p class="whisky-price">$300</p>
+                        </div>
+
+                        <div class="whisky-card">
+                            <div class="whisky-name">Glenfiddich 12 Years</div>
+                            <p class="cocktail-description">Single malt suave con notas de pera y caramelo.</p>
+                            <p class="whisky-price">$300</p>
+                        </div>
+
+                        <div class="whisky-card">
+                            <div class="whisky-name">GlenAllachie 12 Years</div>
+                            <p class="cocktail-description">Single malt complejo con notas de miel y especias.</p>
+                            <p class="whisky-price">$650</p>
+                        </div>
+
+                        <div class="whisky-card">
+                            <div class="whisky-name">Lagavulin 16 Years</div>
+                            <p class="cocktail-description">Ahumado intenso con notas de turba y frutas secas.</p>
+                            <p class="whisky-price">$650</p>
+                        </div>
+
+                        <div class="whisky-card">
+                            <div class="whisky-name">Aberlour 12 Years</div>
+                            <p class="cocktail-description">Single malt con notas de frutos rojos y chocolate.</p>
+                            <p class="whisky-price">$450</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
-            <p>© 2024 Hamaki Bar - Experiencia Premium en Puros y Mixología</p>
+            <p>© 2024 Hamaki Bar - Experiencia Premium en Puros, Mixología y Whiskys</p>
             <p class="mb-0">Ambiente sofisticado • Selección exclusiva • Tradición y calidad</p>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Datos completos de todos los puros
+        // DATOS COMPLETOS DE TODOS LOS PUROS EXTRAÍDOS DEL CÓDIGO ANTERIOR
         const cigars = [
-            // PUROS POR CAJA (9 puros)
+            // Puros Mexicanos
             {
-                name: "CAO ZÓCALO (ROBUSTO)",
-                price: "$4500 caja",
-                strength: "Media",
-                size: "Robusto",
-                origin: "nicaragua",
-                notes: "Robusto de alta calidad en presentación de caja exclusiva",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "QUAI DORSAY .54",
-                price: "$7000 caja",
-                strength: "Suave",
-                size: "4.5x54",
-                origin: "cuba",
-                notes: "Edmundo grueso cubano en caja premium importada",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "MONTE CRISTO WIDE EDMUNDO",
-                price: "$14000 caja",
-                strength: "Media-Fuerte",
-                size: "5x54",
-                origin: "cuba",
-                notes: "Legendario puro cubano en caja de colección",
-                image: "fas fa-crown",
-                isBox: true
-            },
-            {
-                name: "PARTAGAS SERIE D NO. 4",
-                price: "$20000 caja",
-                strength: "Fuerte",
-                size: "5x50",
-                origin: "cuba",
-                notes: "Clásico intenso cubano en caja completa premium",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "FLOR DE CANO (ELEGIDOS)",
-                price: "$2000 caja",
-                strength: "Media",
-                size: "5x50",
-                origin: "cuba",
-                notes: "Selección elegante cubana en presentación especial",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "JOYA NICARAGUA SILVER",
-                price: "$5500 caja",
-                strength: "Media",
-                size: "Robusto",
-                origin: "nicaragua",
-                notes: "Línea Silver premium en caja de lujo",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "CUBAN ALTERNATIVES",
-                price: "$2500 caja",
-                strength: "Media",
-                size: "5.66x50",
-                origin: "mexico",
-                notes: "Alternativa premium mexicana en caja completa",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "CASA TURRENT (COLORADO)",
-                price: "$2800 caja",
-                strength: "Media-Fuerte",
-                size: "4x60",
-                origin: "mexico",
-                notes: "Gordito colorado mexicano en caja de 10 piezas",
-                image: "fas fa-box",
-                isBox: true
-            },
-            {
-                name: "SANTA CLARA (EDICIÓN ESPECIAL)",
-                price: "$4000 caja",
-                strength: "Media-Fuerte",
-                size: "5x50",
-                origin: "mexico",
-                notes: "Edición especial limitada en caja de 20 piezas",
-                image: "fas fa-box",
-                isBox: true
-            },
-
-            // PUROS INDIVIDUALES (33 puros)
-            {
-                name: "SANTA CLARA GRAN RESERVA 1830",
-                price: "$150",
-                strength: "Media",
-                size: "5x50",
-                origin: "mexico",
-                notes: "Tabaco cosecha 1999, notas de almendras y chocolate",
-                image: "fas fa-star",
-                isBox: false
-            },
-            {
-                name: "EL REY DEL MUNDO",
-                price: "$250",
-                strength: "Suave",
-                size: "6x52",
-                origin: "honduras",
-                notes: "Cremoso, cedro, canela, cocoa - valle de Talanga",
-                image: "fas fa-globe-americas",
-                isBox: false
-            },
-            {
-                name: "ROOM 101 ICHIBAN",
-                price: "$160",
-                strength: "Suave-Media",
-                size: "6x50",
-                origin: "dominicana",
-                notes: "Cremoso, madera, trigo - ideal principiantes",
-                image: "fas fa-door-open",
-                isBox: false
-            },
-            {
-                name: "BELLAS ARTES (TORO)",
-                price: "$300",
-                strength: "Media-Fuerte",
-                size: "6x54",
-                origin: "nicaragua",
-                notes: "Cremoso, pimienta, café tostado, canela - A.J. Fernandez",
-                image: "fas fa-palette",
-                isBox: false
-            },
-            {
-                name: "FOUNDATION OLMEC (GRANDE)",
-                price: "$666",
-                strength: "Fuerte",
-                size: "6x60",
-                origin: "nicaragua",
-                notes: "Chocolate, café espresso - Tributo a México",
-                image: "fas fa-monument",
-                isBox: false
-            },
-            {
-                name: "TURRENT 1880 MADURO",
-                price: "$350",
-                strength: "Fuerte",
-                size: "5.25x55",
-                origin: "mexico",
-                notes: "Clavo, canela, pimienta, café, chocolate - blend bien balanceado",
-                image: "fas fa-history",
-                isBox: false
-            },
-            {
-                name: "SAN ANDRÉS TUXTLA (PANETELAS)",
+                name: "SAN ANDRÉS TUXTLA (Panetelas)",
                 price: "$35",
                 strength: "Media",
                 size: "4.5x33",
                 origin: "mexico",
                 notes: "Tabaco mexicano de alta calidad en formato panetela",
-                image: "fas fa-leaf",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
                 isBox: false
             },
             {
-                name: "SAN ANDRÉS TUXTLA (TORPEDO)",
+                name: "SAN ANDRÉS TUXTLA (Torpedo)",
                 price: "$85",
                 strength: "Media",
                 size: "6x52",
                 origin: "mexico",
-                notes: "Formato torpedo con la mejor selección de San Andrés Tuxtla",
-                image: "fas fa-meteor",
+                notes: "Formato torpedo con tabaco de San Andrés Tuxtla",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
                 isBox: false
             },
             {
@@ -1010,8 +758,9 @@
                 strength: "Media",
                 size: "4x50",
                 origin: "mexico",
-                notes: "Short robusto con blend exclusivo de tripa corta san andrés",
-                image: "fas fa-home",
+                notes: "Short robusto con blend de tripa corta san andrés",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
                 isBox: false
             },
             {
@@ -1020,8 +769,9 @@
                 strength: "Media-Fuerte",
                 size: "5x50",
                 origin: "mexico",
-                notes: "Notas minerales, cuero, tierra y café tostado de alta calidad",
-                image: "fas fa-star",
+                notes: "Minerales, cuero, tierra, café tostado",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
                 isBox: false
             },
             {
@@ -1031,18 +781,121 @@
                 size: "5x50",
                 origin: "mexico",
                 notes: "Blend san andrés habano y sumatra de tripa corta",
-                image: "fas fa-sun",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
                 isBox: false
             },
             {
-                name: "TURRENT CLORADO (GORDITO)",
+                name: "SANTA CLARA (Edición Especial)",
+                price: "$200",
+                strength: "Media-Fuerte",
+                size: "5x50",
+                origin: "mexico",
+                notes: "Edición especial en formato robusto",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
+                isBox: false
+            },
+            {
+                name: "SANTA CLARA GRAN RESERVA 1830",
+                price: "$150",
+                strength: "Media",
+                size: "5x50",
+                origin: "mexico",
+                notes: "Tabaco cosecha 1999, notas de almendras y chocolate",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
+                isBox: false
+            },
+            {
+                name: "CASA TURRENT (Colorado)",
+                price: "$280",
+                strength: "Media-Fuerte",
+                size: "4x60",
+                origin: "mexico",
+                notes: "Gordito con característico color colorado",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
+                isBox: false
+            },
+            {
+                name: "CASA TURRENT 1880 MADURO",
+                price: "$350",
+                strength: "Fuerte",
+                size: "5.25x55",
+                origin: "mexico",
+                notes: "Clavo, canela, pimienta, café, chocolate - blend bien balanceado",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
+                isBox: false
+            },
+            {
+                name: "TURRENT CLORADO (Gordito)",
                 price: "$280",
                 strength: "Media-Fuerte",
                 size: "4x60",
                 origin: "mexico",
                 notes: "Madera, tierra, musgo, chocolate, pimienta, canela y hierbas",
-                image: "fas fa-tree",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
                 isBox: false
+            },
+            {
+                name: "CUBAN ALTERNATIVES",
+                price: "$165",
+                strength: "Media",
+                size: "5.66x50",
+                origin: "mexico",
+                notes: "Opción diferente a habanos con sabores similares",
+                flagImage: "https://images.unsplash.com/photo-1623517279997-31e43502a7c7?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/mx.png",
+                isBox: false
+            },
+
+            // Puros Cubanos
+            {
+                name: "QUAI DORSAY .54",
+                price: "$7000 caja",
+                strength: "Suave",
+                size: "4.5x54",
+                origin: "cuba",
+                notes: "Edmundo grueso de origen cubano",
+                flagImage: "https://images.unsplash.com/photo-1612540231645-9d80e43c2a04?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/cu.png",
+                isBox: true
+            },
+            {
+                name: "MONTE CRISTO WIDE EDMUNDO",
+                price: "$850 / $14000 caja",
+                strength: "Media-Fuerte",
+                size: "5x54",
+                origin: "cuba",
+                notes: "Clásico cubano de gran prestigio mundial",
+                flagImage: "https://images.unsplash.com/photo-1612540231645-9d80e43c2a04?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/cu.png",
+                isBox: true
+            },
+            {
+                name: "PARTAGAS SERIE D NO. 4",
+                price: "$800 / $14000 caja",
+                strength: "Fuerte",
+                size: "5x50",
+                origin: "cuba",
+                notes: "Vuelta abajo, fortaleza intensa con sabor profundo",
+                flagImage: "https://images.unsplash.com/photo-1612540231645-9d80e43c2a04?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/cu.png",
+                isBox: true
+            },
+            {
+                name: "FLOR DE CANO (Elegidos)",
+                price: "$300 / $2000 caja",
+                strength: "Media",
+                size: "5x50",
+                origin: "cuba",
+                notes: "Tabaco de vuelta abajo y semi vuelta, elaboración artesanal",
+                flagImage: "https://images.unsplash.com/photo-1612540231645-9d80e43c2a04?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/cu.png",
+                isBox: true
             },
             {
                 name: "QUINTERO",
@@ -1050,8 +903,33 @@
                 strength: "Suave-Media",
                 size: "5x50",
                 origin: "cuba",
-                notes: "Totalmente hecho a mano. Aromas terrosos, amaderados con toques de cuero",
-                image: "fas fa-hand-paper",
+                notes: "Totalmente hecho a mano, terroso, amaderado, cuero",
+                flagImage: "https://images.unsplash.com/photo-1612540231645-9d80e43c2a04?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/cu.png",
+                isBox: false
+            },
+
+            // Puros Nicaragüenses
+            {
+                name: "CAO ZÓCALO (Robusto)",
+                price: "$4500 caja",
+                strength: "Media",
+                size: "Robusto",
+                origin: "nicaragua",
+                notes: "Robusto de alta calidad",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
+                isBox: true
+            },
+            {
+                name: "BELLAS ARTES (Toro)",
+                price: "$300",
+                strength: "Media-Fuerte",
+                size: "6x54",
+                origin: "nicaragua",
+                notes: "Cremoso, pimienta, café tostado, canela - A.J. Fernandez",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1060,18 +938,31 @@
                 strength: "Media-Fuerte",
                 size: "4.25x50",
                 origin: "nicaragua",
-                notes: "Cuero, pimienta, cacao, almendra, cedro en perfecta armonía",
-                image: "fas fa-pepper-hot",
+                notes: "Cuero, pimienta, cacao, almendra, cedro",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
-                name: "FLOR DE OLIVA (COROJO)",
+                name: "FOUNDATION OLMEC (Grande)",
+                price: "$666",
+                strength: "Fuerte",
+                size: "6x60",
+                origin: "nicaragua",
+                notes: "Chocolate, café espresso - Tributo a México",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
+                isBox: false
+            },
+            {
+                name: "FLOR DE OLIVA (Corojo)",
                 price: "$150",
                 strength: "Media",
                 size: "6x50",
                 origin: "nicaragua",
-                notes: "Capa corojo ecuatoriano con toque picante. Premium y accesible",
-                image: "fas fa-olive-branch",
+                notes: "Capa corojo ecuatoriano, toque picante, premium accesible",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1080,9 +971,21 @@
                 strength: "Suave",
                 size: "5x56",
                 origin: "nicaragua",
-                notes: "Cremoso con sabores de pimienta, granos tostados y chocolate",
-                image: "fas fa-users",
+                notes: "Cremoso, pimienta, granos tostados, chocolate",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
+            },
+            {
+                name: "JOYA NICARAGUA SILVER",
+                price: "$5500 caja",
+                strength: "Media",
+                size: "Robusto",
+                origin: "nicaragua",
+                notes: "Robusto de la línea Silver",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
+                isBox: true
             },
             {
                 name: "NEW WORLD CAMEROON",
@@ -1090,8 +993,9 @@
                 strength: "Media",
                 size: "5.5x54",
                 origin: "nicaragua",
-                notes: "Creación de A.J. Fernandez. Picante, cuero, cedro, café y caramelo",
-                image: "fas fa-globe-africa",
+                notes: "Picante, cuero, cedro, café, caramelo - A.J. Fernandez",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1101,7 +1005,8 @@
                 size: "4.5x52",
                 origin: "nicaragua",
                 notes: "Tierra, chocolate oscuro, pimienta, cremoso y dulce",
-                image: "fas fa-mountain",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1110,8 +1015,9 @@
                 strength: "Fuerte",
                 size: "5x54",
                 origin: "nicaragua",
-                notes: "Pimienta, cedro, cuero, café. Para paladares audaces",
-                image: "fas fa-bullhorn",
+                notes: "Pimienta, cedro, cuero, café - mucha fortaleza y cuerpo",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1120,8 +1026,9 @@
                 strength: "Media-Fuerte",
                 size: "5x52",
                 origin: "nicaragua",
-                notes: "Chocolate, crema y pimienta con tripa de piloto cubano",
-                image: "fas fa-chess-rook",
+                notes: "Chocolate, crema, pimienta - tripa piloto cubano",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1130,8 +1037,9 @@
                 strength: "Media",
                 size: "5x54",
                 origin: "nicaragua",
-                notes: "Cedro y pimienta con capa sun grown habano",
-                image: "fas fa-industry",
+                notes: "Cedro, pimienta - capa sun grown habano",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1140,8 +1048,9 @@
                 strength: "Media",
                 size: "5x54",
                 origin: "nicaragua",
-                notes: "Cacao, café, nuez moscada, aceitoso y pimienta",
-                image: "fas fa-industry",
+                notes: "Cacao, café, nuez moscada, aceitoso, pimienta",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1150,18 +1059,20 @@
                 strength: "Suave-Media",
                 size: "6x60",
                 origin: "nicaragua",
-                notes: "Cedro, tabaco crudo con toque dulce. Ideal para maridar",
-                image: "fas fa-industry",
+                notes: "Cedro, tabaco crudo, toque dulce - ideal para maridar",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
-                name: "ROSA CUBA (HERENCIA)",
+                name: "ROSA CUBA (Herencia)",
                 price: "$90 - $160",
                 strength: "Media",
                 size: "4.5x52 - 6x60",
                 origin: "nicaragua",
-                notes: "Cuban sandwich blend con excelente tiro y combustión",
-                image: "fas fa-rose",
+                notes: "Cuban sandwich blend - tira muy bien, buena ceniza",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1170,8 +1081,9 @@
                 strength: "Media",
                 size: "6x60",
                 origin: "nicaragua",
-                notes: "Sedoso y picante. Foundation Cigars con balance perfecto",
-                image: "fas fa-tree",
+                notes: "Sedoso, picante - Foundation Cigars, bien balanceado",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
                 isBox: false
             },
             {
@@ -1180,8 +1092,22 @@
                 strength: "Media",
                 size: "6x50",
                 origin: "nicaragua",
-                notes: "Café tostado, chocolate y tabaco maduro. No decepciona",
-                image: "fas fa-flag",
+                notes: "Café tostado, chocolate, tabaco maduro - no decepciona",
+                flagImage: "https://images.unsplash.com/photo-1593536721035-8cdf50dc4f2f?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/ni.png",
+                isBox: false
+            },
+
+            // Puros Hondureños
+            {
+                name: "EL REY DEL MUNDO",
+                price: "$250",
+                strength: "Suave",
+                size: "6x52",
+                origin: "honduras",
+                notes: "Cremoso, cedro, canela, cocoa - valle de Talanga",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
                 isBox: false
             },
             {
@@ -1190,8 +1116,9 @@
                 strength: "Media-Fuerte",
                 size: "5.5x54",
                 origin: "honduras",
-                notes: "Proceso especial de fermentación con 2 años adicionales de maduración",
-                image: "fas fa-wine-bottle",
+                notes: "Proceso de fermentación especial - 2 años maduración",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
                 isBox: false
             },
             {
@@ -1200,8 +1127,9 @@
                 strength: "Media",
                 size: "5x54",
                 origin: "honduras",
-                notes: "Terroso, dulce y maduro picante. Serie B de Villazón",
-                image: "fas fa-hashtag",
+                notes: "Terroso, dulce, maduro picante - serie B de Villazón",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
                 isBox: false
             },
             {
@@ -1210,8 +1138,9 @@
                 strength: "Media-Fuerte",
                 size: "6x54",
                 origin: "honduras",
-                notes: "Cedro, nueces y especies. Capa criolla original de Cuba",
-                image: "fas fa-seedling",
+                notes: "Cedro, nueces, especies - capa criolla original de Cuba",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
                 isBox: false
             },
             {
@@ -1220,8 +1149,9 @@
                 strength: "Suave-Media",
                 size: "6x52",
                 origin: "honduras",
-                notes: "Cuero, musgo y madera. Excelente calidad a precio accesible",
-                image: "fas fa-seedling",
+                notes: "Cuero, musgo, madera - precio accesible, buena calidad",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
                 isBox: false
             },
             {
@@ -1230,18 +1160,33 @@
                 strength: "Suave-Media",
                 size: "6x60",
                 origin: "honduras",
-                notes: "Blend cuban sandwich simple y suave de fácil disfrute",
-                image: "fas fa-seedling",
+                notes: "Blend cuban sandwich - simple y suave",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
                 isBox: false
             },
             {
-                name: "MARIA MANCINI BOX PRESSED",
+                name: "MARÍA MANINI BOX PRESSED",
                 price: "$220",
                 strength: "Media-Fuerte",
                 size: "4.25x52",
                 origin: "honduras",
-                notes: "Notas aceitosas con capa habano 2000. Bien elaborado",
-                image: "fas fa-box",
+                notes: "Notas aceitosas, capa habano 2000 - bien hecho",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/hn.png",
+                isBox: false
+            },
+
+            // República Dominicana
+            {
+                name: "ROOM 101 ICHIBAN (CONNECTICUT)",
+                price: "$160",
+                strength: "Suave-Media",
+                size: "6x50",
+                origin: "dominicana",
+                notes: "Cremoso, madera, trigo - ideal principiantes",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/do.png",
                 isBox: false
             },
             {
@@ -1250,8 +1195,9 @@
                 strength: "Media-Fuerte",
                 size: "6x60",
                 origin: "dominicana",
-                notes: "Blend cuban sandwich de tripa corta y larga balanceado",
-                image: "fas fa-expand-arrows-alt",
+                notes: "Blend cuban sandwich - tripa corta y larga",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/do.png",
                 isBox: false
             },
             {
@@ -1260,185 +1206,77 @@
                 strength: "Media-Fuerte",
                 size: "6x50",
                 origin: "dominicana",
-                notes: "Edición limitada con 7 años de añejamiento. Blend complejo",
-                image: "fas fa-angel",
+                notes: "Edición limitada - 7 años añejamiento, blend complejo",
+                flagImage: "https://images.unsplash.com/photo-1573756037566-7bffe72c7fdb?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/do.png",
                 isBox: false
             },
+
+            // USA
             {
                 name: "FACTORY THROWOUTS NO. 49",
                 price: "$70",
                 strength: "Suave-Media",
                 size: "5.5x49",
                 origin: "usa",
-                notes: "Chocolate, canela y pimienta. Línea económica de J.C. Newman",
-                image: "fas fa-industry",
+                notes: "Chocolate, canela, pimienta - J.C. Newman, línea económica",
+                flagImage: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=600&h=400&fit=crop&q=80&auto=format",
+                countryFlag: "https://flagcdn.com/w160/us.png",
                 isBox: false
             }
         ];
 
-        // Función para obtener el nombre del origen
-        function getOriginName(origin) {
-            const names = {
-                'mexico': '🇲🇽 México',
-                'cuba': '🇨🇺 Cuba', 
-                'nicaragua': '🇳🇮 Nicaragua',
-                'honduras': '🇭🇳 Honduras',
-                'dominicana': '🇩🇴 Rep. Dominicana',
-                'usa': '🇺🇸 USA'
-            };
-            return names[origin] || origin;
-        }
-
-        // Función para obtener la clase de fortaleza
-        function getStrengthClass(strength) {
-            const classes = {
-                'Suave': 'strength-suave',
-                'Media': 'strength-media',
-                'Fuerte': 'strength-fuerte',
-                'Media-Fuerte': 'strength-media-fuerte',
-                'Suave-Media': 'strength-suave-media'
-            };
-            return classes[strength] || 'strength-media';
-        }
-
-        // Función para crear la tarjeta de un puro
-        function createCigarCard(cigar) {
-            const strengthClass = getStrengthClass(cigar.strength);
-            const isBoxCigar = cigar.isBox;
-            const cardClass = isBoxCigar ? 'cigar-card box-card' : 'cigar-card';
-            const badgeClass = isBoxCigar ? 'origin-badge box-badge' : 'origin-badge';
+        // Función para cargar los puros en la página
+        function loadCigars(filter = 'all') {
+            const cigarList = document.getElementById('cigar-list');
+            cigarList.innerHTML = '';
             
-            return `
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="${cardClass}">
-                        <span class="${badgeClass}">${getOriginName(cigar.origin)}</span>
-                        <span class="strength-badge ${strengthClass}">${cigar.strength}</span>
-                        
-                        <div class="cigar-image">
-                            <i class="${cigar.image}"></i>
-                        </div>
-                        
-                        <div class="cigar-name">${cigar.name}</div>
-                        <div class="cigar-price">${cigar.price}</div>
-                        
-                        <div class="cigar-details">
-                            <strong><i class="fas fa-ruler"></i> Tamaño:</strong> ${cigar.size}
-                        </div>
-                        
-                        <div class="cigar-notes">
-                            <i class="fas fa-quote-left"></i> ${cigar.notes}
-                        </div>
-                        
-                        <div class="stats-bar">
-                            <div class="stat">
-                                <div class="stat-value">${cigar.size.split('x')[0] || 'N/A'}"</div>
-                                <div class="stat-label">Longitud</div>
+            const filteredCigars = cigars.filter(cigar => {
+                if (filter === 'all') return true;
+                if (filter === 'box') return cigar.isBox;
+                return cigar.origin === filter;
+            });
+            
+            filteredCigars.forEach(cigar => {
+                const strengthClass = `strength-${cigar.strength.toLowerCase().replace(' ', '-').replace('-media', '-media')}`;
+                
+                const cigarCard = `
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="cigar-card ${cigar.isBox ? 'box-card' : ''}">
+                            <div class="origin-badge">
+                                ${cigar.origin.toUpperCase()}
                             </div>
-                            <div class="stat">
-                                <div class="stat-value">${cigar.size.split('x')[1] || 'N/A'}</div>
-                                <div class="stat-label">Anillo</div>
+                            <div class="strength-badge ${strengthClass}">
+                                ${cigar.strength}
                             </div>
-                            <div class="stat">
-                                <div class="stat-value">${cigar.strength.substring(0, 1)}</div>
-                                <div class="stat-label">Fortaleza</div>
+                            
+                            <div class="cigar-image">
+                                <img src="${cigar.flagImage}" alt="${cigar.name}" 
+                                     onerror="this.src='https://images.unsplash.com/photo-1612540231645-9d80e43c2a04?w=600&h=400&fit=crop&q=80&auto=format'">
+                                <img src="${cigar.countryFlag}" alt="${cigar.origin}" class="flag-overlay">
                             </div>
+                            
+                            <h3 class="cigar-name">${cigar.name}</h3>
+                            <div class="cigar-price">${cigar.price}</div>
+                            
+                            <div class="stats-bar">
+                                <div class="stat">
+                                    <div class="stat-value">${cigar.size}</div>
+                                    <div class="stat-label">Tamaño</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">${cigar.isBox ? 'Caja' : 'Individual'}</div>
+                                    <div class="stat-label">Presentación</div>
+                                </div>
+                            </div>
+                            
+                            <p class="cigar-notes">${cigar.notes}</p>
                         </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Función para renderizar los puros
-        function renderCigars(filter = 'all') {
-            const list = document.getElementById('cigar-list');
-            list.innerHTML = '';
-            
-            let filtered = [];
-            
-            if (filter === 'all') {
-                filtered = cigars;
-            } else if (filter === 'box') {
-                filtered = cigars.filter(c => c.isBox);
-            } else {
-                filtered = cigars.filter(c => 
-                    c.origin.includes(filter) || c.strength.toLowerCase().includes(filter)
-                );
-            }
-            
-            if (filtered.length === 0) {
-                list.innerHTML = `
-                    <div class="col-12 text-center py-5">
-                        <i class="fas fa-search fa-3x mb-3" style="color: var(--secondary); opacity: 0.5;"></i>
-                        <h3 style="color: var(--secondary);">No se encontraron puros</h3>
-                        <p>Intenta con otro filtro</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            // Agrupar por categoría especial para "Por Caja"
-            if (filter === 'box') {
-                list.innerHTML += `
-                    <div class="col-12">
-                        <h3 class="section-title box-section-title">
-                            <i class="fas fa-box"></i> Puros por Caja
-                        </h3>
                     </div>
                 `;
                 
-                filtered.forEach(cigar => {
-                    list.innerHTML += createCigarCard(cigar);
-                });
-            } else if (filter === 'all') {
-                // Mostrar primero los puros por caja, luego los individuales por origen
-                const boxCigars = cigars.filter(c => c.isBox);
-                const individualCigars = cigars.filter(c => !c.isBox);
-                
-                if (boxCigars.length > 0) {
-                    list.innerHTML += `
-                        <div class="col-12">
-                            <h3 class="section-title box-section-title">
-                                <i class="fas fa-box"></i> Puros por Caja
-                            </h3>
-                        </div>
-                    `;
-                    
-                    boxCigars.forEach(cigar => {
-                        list.innerHTML += createCigarCard(cigar);
-                    });
-                }
-                
-                // Agrupar individuales por origen
-                const grouped = {};
-                individualCigars.forEach(cigar => {
-                    if (!grouped[cigar.origin]) grouped[cigar.origin] = [];
-                    grouped[cigar.origin].push(cigar);
-                });
-                
-                const order = ['cuba', 'mexico', 'nicaragua', 'honduras', 'dominicana', 'usa'];
-                
-                order.forEach(origin => {
-                    if (grouped[origin]) {
-                        const originName = getOriginName(origin);
-                        list.innerHTML += `
-                            <div class="col-12">
-                                <h3 class="section-title">
-                                    <i class="fas fa-flag"></i> ${originName}
-                                </h3>
-                            </div>
-                        `;
-                        
-                        grouped[origin].forEach(cigar => {
-                            list.innerHTML += createCigarCard(cigar);
-                        });
-                    }
-                });
-            } else {
-                // Filtros normales (por origen o fortaleza)
-                filtered.forEach(cigar => {
-                    list.innerHTML += createCigarCard(cigar);
-                });
-            }
+                cigarList.innerHTML += cigarCard;
+            });
         }
 
         // Función para filtrar
@@ -1447,21 +1285,16 @@
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
+            
             event.target.classList.add('active');
             
-            renderCigars(filter);
+            // Cargar puros filtrados
+            loadCigars(filter);
         }
 
-        // Inicializar
+        // Inicializar la página
         document.addEventListener('DOMContentLoaded', function() {
-            renderCigars();
-            
-            // Actualizar contadores
-            document.getElementById('count-all').textContent = cigars.length;
-            document.getElementById('count-box').textContent = cigars.filter(c => c.isBox).length;
-            document.getElementById('count-cuba').textContent = cigars.filter(c => c.origin === 'cuba').length;
-            document.getElementById('count-mexico').textContent = cigars.filter(c => c.origin === 'mexico').length;
-            document.getElementById('count-nicaragua').textContent = cigars.filter(c => c.origin === 'nicaragua').length;
+            loadCigars('all');
         });
     </script>
 </body>
